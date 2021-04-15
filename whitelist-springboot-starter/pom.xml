@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
     <description>白名单中间件</description>
 
-    <artifactId>whitelist-spring-boot-starter</artifactId>
+    <artifactId>whitelist-springboot-starter</artifactId>
 
 
 </project>

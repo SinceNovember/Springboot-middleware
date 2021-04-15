@@ -1,0 +1,12 @@
+server:
+  port: 7397
+
+spring:
+  mvc:
+    view:
+      prefix: classpath:/templates/
+      suffix: .html
+
+simple:
+  schedule:
+    zkAddress: 127.0.0.1:2181

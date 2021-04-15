@@ -3,8 +3,8 @@ package com.simple.mybatis;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.sql.*;
-import java.util.*;
 import java.util.Date;
+import java.util.*;
 
 public class DefaultSqlSession implements SqlSession {
 
