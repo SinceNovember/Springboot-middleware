@@ -1,0 +1,28 @@
+#kafka配置
+spring:
+  kafka:
+    #kafka代理地址,可以多个集群
+    bootstrap-servers: localhost:9093
+    consumer:
+      # 指定默认消费者group id
+      group-id: binlog-group-01
+      auto-offset-reset: latest
+      enable-auto-commit: true
+      auto-commit-interval: 100ms
+      #  指定消息key和消息体的编解码方式
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+es:
+  host: http://localhost:9200
+  index: user
+  scheme: http
+  format: "{'id':'1','userId':'','userNickName':'','userHead':'','userPassword':'','createTime':'','updateTime':''}"
+
+kafka:
+  topic: binlog
+
+server:
+  port: 8082
+logging:
+  level:
+    root: INFO
