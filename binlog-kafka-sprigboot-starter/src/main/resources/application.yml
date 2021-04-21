@@ -1,0 +1,23 @@
+#binlog配置
+server:
+  id: 1
+
+binlog:
+  host: localhost
+  port: 3306
+  user: root
+  password: Gepoint
+  # 指定监听的表格
+  database:
+    table: bugstack_02.user_01,bugstack_02.user_02,bugstack_02.user_03,bugstack_02.user_04
+spring:
+  kafka:
+    bootstrap-servers: localhost:9093
+
+kafka:
+  topic: binlog
+  partNum: 3
+  repeatNum: 1
+logging:
+  level:
+    root: INFO
