@@ -3,14 +3,13 @@ package com.simple.db.router.annotation;
 import java.lang.annotation.*;
 
 /**
- * 路由注解
+ * 路由策略，分表标记
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE, ElementType.METHOD})
-public @interface DBRouter {
+public @interface DBRouterStrategy {
 
-    /** 分库分表字段 */
-    String key() default "";
+    boolean splitTable() default false;
 
 }
